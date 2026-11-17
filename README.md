@@ -37,11 +37,17 @@ go run .
 | Método | Rota | Porta | Descrição 
 
 | `GET` | `/health` | `8080` | Verifica se a API está ativa (`{"status": "UP"}`). 
+
 | `POST` | `/pedidos` | `8080` | Valida e registra um novo pedido com seus itens no banco, retornando o recibo com frete. 
+
 | `GET` | `/pedidos` | `8080` | Lista todos os pedidos salvos com seus respectivos itens. 
+
 | `GET` | `/pedidos?id={id}` | `8080` | Busca um pedido específico pelo ID (`400` se inválido, `404` se não encontrado). 
+
 | `GET` | `/faturamento` | `8080` | Retorna a quantidade total de pedidos e o valor total faturado (itens + frete). 
+
 | `POST` | `/ia/perguntar` | `8080` | Envia uma pergunta ao agente de IA, que aciona ferramentas locais quando necessário. 
+
 | `GET` | `/sse` | `8081` | Canal SSE/HTTP do servidor MCP para conexão de clientes de IA. 
 
 
